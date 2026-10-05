@@ -1,0 +1,58 @@
+apiVersion: 1
+
+groups:
+  - orgId: 1
+    name: order-tracker
+    folder: Order Tracker
+    interval: 10s
+    rules:
+      - uid: order-tracker-5xx
+        title: Order Tracker 5xx responses
+        condition: C
+        for: 0s
+        # No 5xx series at all means no server errors, so the alert stays Normal.
+        noDataState: OK
+        execErrState: Error
+        data:
+          - refId: A
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: prometheus
+            model:
+              refId: A
+              instant: true
+              intervalMs: 1000
+              maxDataPoints: 43200
+              expr: 'sum by (http_route) (increase(http_server_requests_total{http_response_status_code=~"5.."}[1m]))'
+          - refId: C
+            relativeTimeRange:
+              from: 0
+              to: 0
+            datasourceUid: __expr__
+            model:
+              refId: C
+              type: threshold
+              datasource:
+                type: __expr__
+                uid: __expr__
+              expression: A
+              conditions:
+                - evaluator:
+                    type: gt
+                    params: [0]
+                  operator:
+                    type: and
+                  query:
+                    params: [C]
+                  reducer:
+                    type: last
+                  type: query
+        labels:
+          severity: critical
+          service: order-tracker
+        annotations:
+          summary: "Order Tracker returned 5xx responses on {{ $labels.http_route }}"
+          endpoint: "{{ $labels.http_route }}"
+          dashboard: "http://localhost:3000/d/order-tracker/order-tracker"
+          description: "Server errors in the last minute on {{ $labels.http_route }}. Check the Order Tracker dashboard for logs and traces."

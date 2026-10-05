@@ -1,13 +1,17 @@
 import os
 import sqlite3
+import time
 from contextlib import asynccontextmanager
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from uuid import uuid4
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
+from starlette.routing import Match
+
+from app.telemetry import configure_telemetry, logger, request_counter, request_duration, tracer
 
 
 DB_PATH = Path(os.getenv("ORDER_DB_PATH", "data/orders.db"))
@@ -55,7 +59,7 @@ def order_detail(row):
     order = as_dict(row)
     if order["priority"] == "express":
         placed_at = datetime.fromisoformat(order["created_at"])
-        estimated_at = placed_at.replace(day=placed_at.day + 2)
+        estimated_at = placed_at + timedelta(days=2)
         order["estimated_delivery"] = estimated_at.date().isoformat()
     return order
 
@@ -76,7 +80,41 @@ async def lifespan(_app: FastAPI):
     yield
 
 
+configure_telemetry()
 app = FastAPI(title="Order Tracker", lifespan=lifespan)
+
+
+def route_template(request: Request) -> str:
+    # Use the route pattern (/api/orders/{order_id}), not the raw path, so metric labels stay low-cardinality.
+    for route in request.app.router.routes:
+        match, _ = route.matches(request.scope)
+        if match == Match.FULL:
+            return route.path
+    return "unmatched"
+
+
+@app.middleware("http")
+async def observe_requests(request: Request, call_next):
+    started = time.perf_counter()
+    status_code = 500
+    try:
+        response = await call_next(request)
+        status_code = response.status_code
+        return response
+    except Exception:
+        logger.exception("unhandled error for %s %s", request.method, request.url.path)
+        raise
+    finally:
+        route = route_template(request)
+        duration = time.perf_counter() - started
+        attributes = {
+            "http.route": route,
+            "http.request.method": request.method,
+            "http.response.status_code": status_code,
+        }
+        request_counter.add(1, attributes)
+        request_duration.record(duration, attributes)
+        logger.info("%s %s route=%s status=%s", request.method, request.url.path, route, status_code)
 
 
 @app.get("/")
@@ -100,11 +138,17 @@ def list_orders():
 
 @app.get("/api/orders/{order_id}")
 def get_order(order_id: str):
-    with connect() as db:
-        row = db.execute("SELECT * FROM orders WHERE id = ?", (order_id,)).fetchone()
-    if row is None:
-        raise HTTPException(404, "Order not found")
-    return order_detail(row)
+    with tracer.start_as_current_span("lookup order") as span:
+        span.set_attribute("order.id", order_id)
+        with connect() as db:
+            row = db.execute("SELECT * FROM orders WHERE id = ?", (order_id,)).fetchone()
+        if row is None:
+            logger.warning("order lookup failed: %s not found", order_id)
+            raise HTTPException(404, "Order not found")
+        order = order_detail(row)
+        span.set_attribute("order.priority", order["priority"])
+        logger.info("order lookup ok: %s status=%s", order_id, order["status"])
+        return order
 
 
 @app.post("/api/orders", status_code=201)

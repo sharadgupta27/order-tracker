@@ -1,0 +1,13 @@
+All 4 tests pass (the 3 existing + the new regression test).
+
+## Summary
+
+**Root cause:** `order_detail()` in `app/main.py` computed express-order delivery estimates with `placed_at.replace(day=placed_at.day + 2)`. This throws `ValueError: day is out of range for month` whenever `placed_at.day` is within 2 days of the end of its month (e.g., day 30 or 31), since `.replace()` doesn't roll over into the next month. The seeded `express-1002` order is created with `created_at` set to the last day of the previous month, so this reliably 500s on `GET /api/orders/express-1002` — matching the alert's `http_route=/api/orders/{order_id}` and the traceback in the evidence logs/traces.
+
+**Fix:** Changed the calculation to `placed_at + timedelta(days=2)`, which correctly rolls over month/year boundaries (`app/main.py:62`).
+
+**Regression test:** Added `test_express_order_estimated_delivery_crosses_month_end` in `tests/test_api.py`, calling `order_detail()` directly with a `created_at` of `2026-01-31`, asserting the estimated delivery is `2026-02-02`.
+
+`uv run --frozen pytest -q` passes (4/4).
+
+RESULT: FIXED

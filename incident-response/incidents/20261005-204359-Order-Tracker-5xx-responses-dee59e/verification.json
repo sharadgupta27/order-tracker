@@ -1,0 +1,6 @@
+{
+  "GET /healthz": 200,
+  "GET /api/orders/standard-1001": 200,
+  "GET /api/orders/standard-1003": 200,
+  "GET /api/orders/express-1002": 200
+}

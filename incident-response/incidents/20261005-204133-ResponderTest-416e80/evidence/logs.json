@@ -1,0 +1,4358 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "streams",
+    "result": [
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "105",
+          "detected_level": "error",
+          "exception_message": "day is out of range for month",
+          "exception_stacktrace": "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 101, in observe_requests\n    response = await call_next(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 168, in call_next\n    raise app_exc from app_exc.__cause__ or app_exc.__context__\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 144, in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 670, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 2734, in app\n    await route.handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 1281, in handle\n    await super().handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 280, in handle\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 158, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 144, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 706, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 354, in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/concurrency.py\", line 34, in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/to_thread.py\", line 65, in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 2706, in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 1100, in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 148, in get_order\n    order = order_detail(row)\n            ^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 62, in order_detail\n    estimated_at = placed_at.replace(day=placed_at.day + 2)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n",
+          "exception_type": "ValueError",
+          "observed_timestamp": "1791232107806049126",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "17",
+          "severity_text": "ERROR",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232107800506880",
+            "unhandled error for GET /api/orders/express-1002"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "105",
+          "detected_level": "error",
+          "exception_message": "day is out of range for month",
+          "exception_stacktrace": "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 101, in observe_requests\n    response = await call_next(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 168, in call_next\n    raise app_exc from app_exc.__cause__ or app_exc.__context__\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 144, in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 670, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 2734, in app\n    await route.handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 1281, in handle\n    await super().handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 280, in handle\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 158, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 144, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 706, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 354, in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/concurrency.py\", line 34, in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/to_thread.py\", line 65, in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 2706, in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 1100, in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 148, in get_order\n    order = order_detail(row)\n            ^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 62, in order_detail\n    estimated_at = placed_at.replace(day=placed_at.day + 2)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n",
+          "exception_type": "ValueError",
+          "observed_timestamp": "1791232108174767849",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "17",
+          "severity_text": "ERROR",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232108172580352",
+            "unhandled error for GET /api/orders/express-1002"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "105",
+          "detected_level": "error",
+          "exception_message": "day is out of range for month",
+          "exception_stacktrace": "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 101, in observe_requests\n    response = await call_next(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 168, in call_next\n    raise app_exc from app_exc.__cause__ or app_exc.__context__\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 144, in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 670, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 2734, in app\n    await route.handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 1281, in handle\n    await super().handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 280, in handle\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 158, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 144, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 706, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 354, in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/concurrency.py\", line 34, in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/to_thread.py\", line 65, in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 2706, in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 1100, in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 148, in get_order\n    order = order_detail(row)\n            ^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 62, in order_detail\n    estimated_at = placed_at.replace(day=placed_at.day + 2)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n",
+          "exception_type": "ValueError",
+          "observed_timestamp": "1791232108473386369",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "17",
+          "severity_text": "ERROR",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232108472064256",
+            "unhandled error for GET /api/orders/express-1002"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "105",
+          "detected_level": "error",
+          "exception_message": "day is out of range for month",
+          "exception_stacktrace": "Traceback (most recent call last):\n  File \"/app/app/main.py\", line 101, in observe_requests\n    response = await call_next(request)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 168, in call_next\n    raise app_exc from app_exc.__cause__ or app_exc.__context__\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/base.py\", line 144, in coro\n    await self.app(scope, receive_or_disconnect, send_no_error)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/middleware/exceptions.py\", line 63, in __call__\n    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py\", line 18, in __call__\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 670, in __call__\n    await self.middleware_stack(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 2734, in app\n    await route.handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 1281, in handle\n    await super().handle(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/routing.py\", line 280, in handle\n    await self.app(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 158, in app\n    await wrap_app_handling_exceptions(app, request)(scope, receive, send)\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 53, in wrapped_app\n    raise exc\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/_exception_handler.py\", line 42, in wrapped_app\n    await app(scope, receive, sender)\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 144, in app\n    response = await f(request)\n               ^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 706, in app\n    raw_response = await run_endpoint_function(\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/fastapi/routing.py\", line 354, in run_endpoint_function\n    return await run_in_threadpool(dependant.call, **values)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/starlette/concurrency.py\", line 34, in run_in_threadpool\n    return await anyio.to_thread.run_sync(func)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/to_thread.py\", line 65, in run_sync\n    return await get_async_backend().run_sync_in_worker_thread(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 2706, in run_sync_in_worker_thread\n    return await future\n           ^^^^^^^^^^^^\n  File \"/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py\", line 1100, in run\n    result = context.run(func, *args)\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 148, in get_order\n    order = order_detail(row)\n            ^^^^^^^^^^^^^^^^^\n  File \"/app/app/main.py\", line 62, in order_detail\n    estimated_at = placed_at.replace(day=placed_at.day + 2)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: day is out of range for month\n",
+          "exception_type": "ValueError",
+          "observed_timestamp": "1791232178379178384",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "17",
+          "severity_text": "ERROR",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232178377933056",
+            "unhandled error for GET /api/orders/express-1002"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791231998363004810",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791231998362902272",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232003536485741",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232003536372992",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232008739659812",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232008739517952",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232013938564496",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232013938465536",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232019088868060",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232019088726528",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232024240799936",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232024240653056",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232029396051739",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232029395954176",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232034633579177",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232034633394944",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232039897290180",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232039897181184",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232045057780618",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232045057641472",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232050256867816",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232050256763648",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232055401959332",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232055401858816",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232060686260705",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232060686128640",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232065936491101",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232065936344320",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232071109638985",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232071109542400",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232076284659304",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232076284559616",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232081458446867",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232081458348544",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232086590683097",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232086590591744",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232091734777243",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232091734680832",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232096877540179",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232096877417984",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232102056023602",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232102055922432",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232107190731488",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232107190612736",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232107808877892",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232107808749824",
+            "GET /api/orders/express-1002 route=/api/orders/{order_id} status=500"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232108176565706",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232108176476416",
+            "GET /api/orders/express-1002 route=/api/orders/{order_id} status=500"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232108474883976",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232108474809344",
+            "GET /api/orders/express-1002 route=/api/orders/{order_id} status=500"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232112351265687",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232112351080192",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232117486468838",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232117486376704",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232122622970360",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232122622874368",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232127763679143",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232127763581696",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232132899324789",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232132899225088",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232138063989550",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232138063866112",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232143205930041",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232143205832704",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232148360400300",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232148360304128",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232153526042435",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232153525944064",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232158672456018",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232158672316416",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232163804078927",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232163803877888",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232168952793200",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232168952690176",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232174087990760",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232174087848192",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232178380785065",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232178380716800",
+            "GET /api/orders/express-1002 route=/api/orders/{order_id} status=500"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232179229570182",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232179229462784",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232184375411864",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232184375313408",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232189508267807",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232189508167936",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232194682771108",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232194682579712",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232199926033400",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232199925895680",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232205060888708",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232205060794880",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232210198573795",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232210198472960",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232215353188020",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232215353088256",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232220489969685",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232220489849856",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232225613655494",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232225613562368",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232230746259173",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232230746159872",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232235900130045",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232235900027648",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232241047994265",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232241047800576",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232246188372255",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232246188272128",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232251337715526",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232251337613056",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232256471206780",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232256471047680",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232261624013507",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232261623898368",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232266757325794",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232266757199872",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232271891360524",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232271891213312",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232277023256851",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232277023110912",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232282169277939",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232282169132288",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232287334384365",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232287334285312",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232292457915790",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232292457825280",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232297584207109",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232297584109568",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232302716037509",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232302715937536",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232307858687372",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232307858590208",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232312980883245",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232312980791296",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232318111539000",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232318111439360",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232323264309449",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232323264106240",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232328402857330",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232328402757632",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232333542122480",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232333542023936",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232338677420371",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232338677321728",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232343814162702",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232343814064896",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232348944065307",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232348943969024",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232354082888978",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232354082789632",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232359226165465",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232359226016768",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232364362703287",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232364362604800",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232369492038085",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232369491940096",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232374675718402",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232374675584000",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232379822052172",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232379821878784",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232384948871177",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232384948778752",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232390105940618",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232390105833216",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232395247825005",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232395247700480",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232400366711468",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232400366618368",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232405492372746",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232405492280320",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232410615642788",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232410615462144",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232415744891563",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232415744797696",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232420872728404",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232420872634624",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232426008248895",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232426008102400",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232431142274955",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232431142183936",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232436304335863",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232436304232448",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232441427719291",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232441427627520",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232446554307676",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232446554212608",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232451681048178",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232451680956416",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232456816295271",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232456816113920",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232461953245084",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232461953149440",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232467077742869",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232467077636352",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232472236572367",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232472236471808",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232477355101347",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232477355010048",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232482484288847",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232482484196864",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232487605441898",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232487605350912",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232492737866566",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232492737764352",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232497867015966",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232497866872832",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232503003307497",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232503003214592",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232508133551447",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232508133451264",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232513272475681",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232513272382976",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232518401013417",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232518400895232",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232523583848800",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232523583744256",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232528713300533",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232528713208832",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232533861927165",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232533861780992",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232538987610305",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232538987494400",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232544117045449",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232544116953088",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232549241503870",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232549241406208",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232554366288209",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232554366191104",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232559487802818",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232559487621376",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232565386364142",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232565386250752",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232571621356678",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232571621263616",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232577135609337",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232577135510784",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232582397832690",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232582397725696",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232587568979598",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232587568883968",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232592800612719",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232592800470016",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232598073519890",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232598073422848",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232603346583105",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232603346480640",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232608567484343",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232608567379200",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232613730328132",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232613730220544",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232618875484994",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232618875366912",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232624031761943",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232624031617792",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232629176747487",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232629176654336",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232634472396227",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232634472113408",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232639643190089",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232639643098112",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232644832960159",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232644832857856",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232650029795808",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232650029702400",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232655158061870",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232655157971456",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232660338481172",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232660338371328",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232665469428829",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232665469269504",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232670630840418",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232670630696192",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232675824814908",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232675824703744",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232680995285058",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232680995175168",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232686141816704",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232686141670400",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232691309741178",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232691309596928",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232696450950236",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232696450857216",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232701581789903",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232701581673216",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232706719213175",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232706719122176",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232711857086244",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232711856993536",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232717109151057",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232717109052160",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232722274554853",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232722274398720",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232727421597571",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232727421507840",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232732597484888",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232732597390592",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232737819397758",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232737819260160",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232742977730560",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232742977635072",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232748105520215",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232748105425920",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232753272350468",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232753272251904",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232758403522743",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232758403426048",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232763587524870",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232763587421952",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232768730307326",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232768730210816",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232773873539033",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232773873448192",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232779008276795",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232779008174848",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232784146671592",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232784146532608",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232789335825752",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232789335730176",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232794475270894",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232794475126784",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232799619386412",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232799619290368",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232804758962400",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232804758863104",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232809894293760",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232809894169600",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232815086420741",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232815086309376",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232820249024615",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232820248923904",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232825374979651",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232825374870272",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232830513296798",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232830513200640",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232835635702168",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232835635612160",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232840834873135",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232840834774784",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232845991309665",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232845991180544",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232851124392946",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232851124237312",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232856278423101",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232856278322688",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232861471468768",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232861471287552",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232866600080367",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232866599931392",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232871738603009",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232871738455552",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232876874822252",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232876874723584",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232882010667278",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232882010566656",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232887183808914",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232887183667200",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      },
+      {
+        "stream": {
+          "code_file_path": "/app/app/main.py",
+          "code_function_name": "observe_requests",
+          "code_line_number": "117",
+          "detected_level": "info",
+          "observed_timestamp": "1791232892311868034",
+          "scope_name": "order_tracker",
+          "service_instance_id": "b5a89c54-2728-4b17-a181-72ebe9fd3132",
+          "service_name": "order-tracker",
+          "severity_number": "9",
+          "severity_text": "INFO",
+          "telemetry_sdk_language": "python",
+          "telemetry_sdk_name": "opentelemetry",
+          "telemetry_sdk_version": "1.45.0"
+        },
+        "values": [
+          [
+            "1791232892311770368",
+            "GET /healthz route=/healthz status=200"
+          ]
+        ]
+      }
+    ],
+    "stats": {
+      "summary": {
+        "bytesProcessedPerSecond": 208029,
+        "linesProcessedPerSecond": 1632,
+        "totalBytesProcessed": 23188,
+        "totalLinesProcessed": 182,
+        "execTime": 0.111465,
+        "queueTime": 0.000617,
+        "subqueries": 0,
+        "totalEntriesReturned": 182,
+        "splits": 0,
+        "shards": 1,
+        "totalPostFilterLines": 182,
+        "totalStructuredMetadataBytesProcessed": 16112
+      },
+      "querier": {
+        "store": {
+          "totalChunksRef": 0,
+          "totalChunksDownloaded": 0,
+          "chunksDownloadTime": 0,
+          "queryReferencedStructuredMetadata": false,
+          "chunk": {
+            "headChunkBytes": 0,
+            "headChunkLines": 0,
+            "decompressedBytes": 0,
+            "decompressedLines": 0,
+            "compressedBytes": 0,
+            "totalDuplicates": 0,
+            "postFilterLines": 0,
+            "headChunkStructuredMetadataBytes": 0,
+            "decompressedStructuredMetadataBytes": 0
+          },
+          "chunkRefsFetchTime": 0,
+          "congestionControlLatency": 0,
+          "pipelineWrapperFilteredLines": 0
+        }
+      },
+      "ingester": {
+        "totalReached": 1,
+        "totalChunksMatched": 1,
+        "totalBatches": 3,
+        "totalLinesSent": 182,
+        "store": {
+          "totalChunksRef": 0,
+          "totalChunksDownloaded": 0,
+          "chunksDownloadTime": 0,
+          "queryReferencedStructuredMetadata": false,
+          "chunk": {
+            "headChunkBytes": 23188,
+            "headChunkLines": 182,
+            "decompressedBytes": 0,
+            "decompressedLines": 0,
+            "compressedBytes": 0,
+            "totalDuplicates": 0,
+            "postFilterLines": 182,
+            "headChunkStructuredMetadataBytes": 16112,
+            "decompressedStructuredMetadataBytes": 0
+          },
+          "chunkRefsFetchTime": 168065,
+          "congestionControlLatency": 0,
+          "pipelineWrapperFilteredLines": 0
+        }
+      },
+      "cache": {
+        "chunk": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        },
+        "index": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        },
+        "result": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        },
+        "statsResult": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        },
+        "volumeResult": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        },
+        "seriesResult": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        },
+        "labelResult": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        },
+        "instantMetricResult": {
+          "entriesFound": 0,
+          "entriesRequested": 0,
+          "entriesStored": 0,
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "requests": 0,
+          "downloadTime": 0,
+          "queryLengthServed": 0
+        }
+      },
+      "index": {
+        "totalChunks": 0,
+        "postFilterChunks": 0,
+        "shardsDuration": 0,
+        "usedBloomFilters": false
+      }
+    }
+  }
+}

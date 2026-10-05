@@ -1,0 +1,28 @@
+{
+  "status": "firing",
+  "labels": {
+    "alertname": "Order Tracker 5xx responses",
+    "grafana_folder": "Order Tracker",
+    "http_route": "/api/orders/{order_id}",
+    "service": "order-tracker",
+    "severity": "critical"
+  },
+  "annotations": {
+    "dashboard": "http://localhost:3000/d/order-tracker/order-tracker",
+    "description": "Server errors in the last minute on /api/orders/{order_id}. Check the Order Tracker dashboard for logs and traces.",
+    "endpoint": "/api/orders/{order_id}",
+    "summary": "Order Tracker returned 5xx responses on /api/orders/{order_id}"
+  },
+  "startsAt": "2026-10-05T20:43:10Z",
+  "endsAt": "0001-01-01T00:00:00Z",
+  "generatorURL": "http://localhost:3000/alerting/grafana/order-tracker-5xx/view?orgId=1",
+  "fingerprint": "4f283efda4e94e95",
+  "silenceURL": "http://localhost:3000/alerting/silence/new?alertmanager=grafana&matcher=alertname%3DOrder+Tracker+5xx+responses&matcher=grafana_folder%3DOrder+Tracker&matcher=http_route%3D%2Fapi%2Forders%2F%7Border_id%7D&matcher=service%3Dorder-tracker&matcher=severity%3Dcritical&orgId=1",
+  "dashboardURL": "",
+  "panelURL": "",
+  "values": {
+    "A": 3.27296530656775,
+    "C": 1
+  },
+  "valueString": "[ var='A' labels={http_route=/api/orders/{order_id}} value=3.27296530656775 ], [ var='C' labels={http_route=/api/orders/{order_id}} value=1 ]"
+}

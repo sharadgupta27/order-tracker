@@ -1,0 +1,300 @@
+app-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app-1  |   File "/app/.venv/lib/python3.12/site-packages/starlette/concurrency.py", line 34, in run_in_threadpool
+app-1  |     return await anyio.to_thread.run_sync(func)
+app-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app-1  |   File "/app/.venv/lib/python3.12/site-packages/anyio/to_thread.py", line 65, in run_sync
+app-1  |     return await get_async_backend().run_sync_in_worker_thread(
+app-1  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app-1  |   File "/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 2706, in run_sync_in_worker_thread
+app-1  |     return await future
+app-1  |            ^^^^^^^^^^^^
+app-1  |   File "/app/.venv/lib/python3.12/site-packages/anyio/_backends/_asyncio.py", line 1100, in run
+app-1  |     result = context.run(func, *args)
+app-1  |              ^^^^^^^^^^^^^^^^^^^^^^^^
+app-1  |   File "/app/app/main.py", line 148, in get_order
+app-1  |     order = order_detail(row)
+app-1  |             ^^^^^^^^^^^^^^^^^
+app-1  |   File "/app/app/main.py", line 62, in order_detail
+app-1  |     estimated_at = placed_at.replace(day=placed_at.day + 2)
+app-1  |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+app-1  | ValueError: day is out of range for month
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:58706 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:35620 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:35632 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34862 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34876 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47066 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47082 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:51382 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:51384 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37452 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37460 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47332 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47342 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47826 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47830 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:57212 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:57214 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:42024 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:42030 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54712 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54718 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:59466 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:59470 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:33288 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:40054 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:40068 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:52132 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:52140 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:49892 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:49900 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:41482 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:41484 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:40462 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:40470 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:41048 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:41052 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:52636 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:52648 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37382 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37396 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:57280 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:57286 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:52824 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:52830 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34086 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34092 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:60700 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:60704 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:36446 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO:     127.0.0.1:36458 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:57274 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO:     127.0.0.1:57286 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:33840 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:33850 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:59484 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:59488 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54960 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54970 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:53024 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:53038 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:60090 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:58674 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:58688 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:43204 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:43206 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34980 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34994 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39866 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39880 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:53520 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:53536 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO:     127.0.0.1:54802 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54808 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39626 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39638 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34164 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34174 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39510 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39514 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:49114 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:42446 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:42460 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:55958 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:55972 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:43038 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:43050 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34078 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:34084 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:33382 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:33386 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39952 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39962 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:55908 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:55918 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37984 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37992 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:38720 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:38722 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39598 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:39604 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:51964 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:51980 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54606 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54620 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:51762 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:51768 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:38522 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO:     127.0.0.1:60146 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:60160 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:57768 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:57784 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:46028 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:46032 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:44606 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:44622 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:56784 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:56790 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54774 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54788 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:40412 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:40414 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:58054 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:58062 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:38390 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:38398 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:43274 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:43282 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54796 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:54802 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:55874 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:55886 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47576 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:47584 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37608 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37624 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:60754 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:60768 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:36656 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:36664 - "GET /healthz HTTP/1.1" 200 OK
+app-1  | INFO order_tracker: GET /healthz route=/healthz status=200
+app-1  | INFO:     127.0.0.1:37988 - "GET /healthz HTTP/1.1" 200 OK

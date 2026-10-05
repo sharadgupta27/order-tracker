@@ -33,3 +33,17 @@ def test_create_and_update_order(client):
 
 def test_missing_order(client):
     assert client.get("/api/orders/missing").status_code == 404
+
+
+def test_express_order_estimated_delivery_crosses_month_end():
+    order = main.order_detail(
+        {
+            "id": "express-9999",
+            "customer": "Jordan",
+            "item": "Keyboard",
+            "priority": "express",
+            "status": "preparing",
+            "created_at": "2026-01-31T00:00:00+00:00",
+        }
+    )
+    assert order["estimated_delivery"] == "2026-02-02"

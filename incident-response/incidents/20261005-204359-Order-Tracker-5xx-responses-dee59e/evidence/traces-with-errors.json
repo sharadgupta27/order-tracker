@@ -1,0 +1,465 @@
+{
+  "traces": [
+    {
+      "traceID": "cfa69a3a1eff6bbfb1b46e3f22054b1b",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791232991084804355",
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "cff1760a534e53b1",
+            "startTimeUnixNano": "1791232991084804355",
+            "durationNanos": "739873",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "cff1760a534e53b1",
+              "startTimeUnixNano": "1791232991084804355",
+              "durationNanos": "739873",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "4775a0245fc63ab5b36fc32dc6f1d1ff",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791232987725225023",
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "48ac3e52e1118fcd",
+            "startTimeUnixNano": "1791232987725225023",
+            "durationNanos": "813537",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "48ac3e52e1118fcd",
+              "startTimeUnixNano": "1791232987725225023",
+              "durationNanos": "813537",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "acc9428bb74f148c1c954539f0b1093f",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791232984379514148",
+      "durationMs": 1,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "78040bf4b48ac4fa",
+            "startTimeUnixNano": "1791232984379514148",
+            "durationNanos": "1473869",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "78040bf4b48ac4fa",
+              "startTimeUnixNano": "1791232984379514148",
+              "durationNanos": "1473869",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "6dcee64a898c422948a0f7f89f7e388a",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791232178376710419",
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "a9e7c05d3f6e3145",
+            "startTimeUnixNano": "1791232178376710419",
+            "durationNanos": "972654",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "a9e7c05d3f6e3145",
+              "startTimeUnixNano": "1791232178376710419",
+              "durationNanos": "972654",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "7f94d5952c6c11a189efdcc48964a2cc",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791232108470292662",
+      "durationMs": 1,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "f610e709d608afd5",
+            "startTimeUnixNano": "1791232108470292662",
+            "durationNanos": "1032461",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "f610e709d608afd5",
+              "startTimeUnixNano": "1791232108470292662",
+              "durationNanos": "1032461",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "e8029008039efb3bb23108d933f59819",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791232108171098037",
+      "durationMs": 1,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "37675fa5ad8d798f",
+            "startTimeUnixNano": "1791232108171098037",
+            "durationNanos": "1043854",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "37675fa5ad8d798f",
+              "startTimeUnixNano": "1791232108171098037",
+              "durationNanos": "1043854",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "b0d39460a24744a0ea7bc4e148ddec0",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791232107798122608",
+      "durationMs": 1,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "2ce02315cc66b698",
+            "startTimeUnixNano": "1791232107798122608",
+            "durationNanos": "1955899",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "2ce02315cc66b698",
+              "startTimeUnixNano": "1791232107798122608",
+              "durationNanos": "1955899",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "c04119c610500ba54f1925affdd0d395",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791231967306187883",
+      "durationMs": 1,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "e21c296391be925a",
+            "startTimeUnixNano": "1791231967306187883",
+            "durationNanos": "1210350",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "e21c296391be925a",
+              "startTimeUnixNano": "1791231967306187883",
+              "durationNanos": "1210350",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    },
+    {
+      "traceID": "706152fd0042453a807981ab6ce7073",
+      "rootServiceName": "order-tracker",
+      "rootTraceName": "lookup order",
+      "startTimeUnixNano": "1791231946964920940",
+      "durationMs": 4,
+      "spanSet": {
+        "spans": [
+          {
+            "spanID": "3b140cff344ce8c4",
+            "startTimeUnixNano": "1791231946964920940",
+            "durationNanos": "4099812",
+            "attributes": [
+              {
+                "key": "status",
+                "value": {
+                  "stringValue": "error"
+                }
+              }
+            ]
+          }
+        ],
+        "matched": 1
+      },
+      "spanSets": [
+        {
+          "spans": [
+            {
+              "spanID": "3b140cff344ce8c4",
+              "startTimeUnixNano": "1791231946964920940",
+              "durationNanos": "4099812",
+              "attributes": [
+                {
+                  "key": "status",
+                  "value": {
+                    "stringValue": "error"
+                  }
+                }
+              ]
+            }
+          ],
+          "matched": 1
+        }
+      ],
+      "serviceStats": {
+        "order-tracker": {
+          "spanCount": 1,
+          "errorCount": 1
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "inspectedBytes": "90665",
+    "completedJobs": 1,
+    "totalJobs": 1
+  }
+}

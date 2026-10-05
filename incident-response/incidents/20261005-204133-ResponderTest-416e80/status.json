@@ -1,0 +1,8 @@
+{
+  "stage": "escalated",
+  "updated_at": "2026-10-05T20:42:24.946568+00:00",
+  "reason": "agent changed files outside app/ and tests/",
+  "files": [
+    "incident-response/responder.log"
+  ]
+}
