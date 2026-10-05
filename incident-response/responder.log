@@ -1,0 +1,17 @@
+INFO:     Started server process [37404]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8001 (Press CTRL+C to quit)
+[20261005-204359-Order-Tracker-5xx-responses-dee59e] received
+INFO:     127.0.0.1:64129 - "POST /alerts HTTP/1.1" 202 Accepted
+[20261005-204359-Order-Tracker-5xx-responses-dee59e] collecting evidence
+[20261005-204359-Order-Tracker-5xx-responses-dee59e] agent running
+INFO:     127.0.0.1:64156 - "GET /incidents HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64159 - "GET /incidents/20261005-204359-Order-Tracker-5xx-responses-dee59e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64164 - "GET /incidents/20261005-204359-Order-Tracker-5xx-responses-dee59e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57503 - "GET /incidents/20261005-204359-Order-Tracker-5xx-responses-dee59e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62748 - "POST /alerts HTTP/1.1" 202 Accepted
+INFO:     127.0.0.1:52507 - "GET /incidents/20261005-204359-Order-Tracker-5xx-responses-dee59e HTTP/1.1" 200 OK
+[20261005-204359-Order-Tracker-5xx-responses-dee59e] fixed and verified {'agent_result': 'FIXED', 'files': ['app/main.py', 'tests/test_api.py'], 'verification': 'pytest passed, app restarted, all order lookups returned non-error responses'}
+INFO:     127.0.0.1:58265 - "GET /incidents/20261005-204359-Order-Tracker-5xx-responses-dee59e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58266 - "GET /incidents/20261005-204359-Order-Tracker-5xx-responses-dee59e HTTP/1.1" 200 OK

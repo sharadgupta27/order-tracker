@@ -29,6 +29,10 @@ What does the health check return?
 
 For this and the next questions, you can ask your coding assistant to help select the correct option.
 
+**Answer:** `{"status":"ok"}`
+
+==============================================================================
+
 ## Question 2: Instrument one endpoint
 
 Imagine a customer says they cannot open an order. You check the website and everything looks okay. We need a better way to undestand what's happening in the system. For that we use metrics, logs and traces.
@@ -53,6 +57,10 @@ Which HTTP status code does the metric record for this lookup?
 - 404
 - 500
 
+**Answer:** 200
+
+==============================================================================
+
 ## Question 3: Build the telemetry pipeline
 
 In Question 2, we looked at the logs to see the telemetry. Let's now save it into a proper telemetry storage.
@@ -72,6 +80,10 @@ In Grafana, find the request metric for this lookup. Check that its log and trac
 - 301
 - 500
 
+**Answer:** 404 (`standard-1002` does not exist in the seed data, so the request metric records 404)
+
+==============================================================================
+
 ## Question 4: Configure the alert
 
 The dashboard shows errors when you open it, but it does not notify anyone on its own. An alert watches the `5xx` metric and changes state when server errors occur. Later, Grafana will send an HTTP request called a webhook to the responder so it can start investigating automatically.
@@ -90,6 +102,10 @@ Wait for the alert to evaluate. What state does Grafana show?
 - Firing
 - Pending
 - No data
+
+**Answer:** Normal. A 404 is not a 5xx, so the alert stays Normal. (It shows "Normal (NoData)" until a 5xx occurs, because the rule treats no data as OK. After a 500 from `express-1002` it changed to Firing.)
+
+==============================================================================
 
 ## Question 5: Build the automatic responder
 
@@ -112,6 +128,10 @@ curl -X POST http://localhost:8001/alerts \
 Wait for the agent to finish, then read its response.
 
 What did the agent respond? Include the last line from its answer.
+
+**Answer:** The agent's response ended with the last line `RESULT: NO_CHANGE`. It treated the alert as a test (`labels.test: "true"`) and changed no files. Full response: `incident-response/incidents/20261005-204133-ResponderTest-416e80/agent-output.txt`.
+
+==============================================================================
 
 ## Question 6: Watch the agent fix the incident
 
@@ -136,6 +156,6 @@ What was the problem?
 - The app rejected the order's `preparing` status.
 - The lookup searched the wrong database column for express orders.
 
-## Submission
+**Answer:** The express delivery date calculation tried to use a day that does not exist in that month.
 
-Submit your homework on the [course platform](https://courses.datatalks.club/ai-dev-tools-2026/homework/hw4). Use the link to your repository. Commit and push your telemetry and alert configuration, responder, incident evidence, and agent's fix.
+The app's log showed `ValueError: day is out of range for month`. The seeded `express-1002` order was created on 2026-09-30, and `placed_at.replace(day=placed_at.day + 2)` produced day 32. The agent's fix changes it to `placed_at + timedelta(days=2)`. After the restart, `express-1002` returns 200 and its estimated delivery is 2026-10-02. The incident evidence is in `incident-response/incidents/20261005-204359-Order-Tracker-5xx-responses-dee59e/`.
